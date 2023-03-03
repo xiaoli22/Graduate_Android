@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Graduate_Android">
         <activity
-            android:name=".MainActivity"
+            android:name=".VerifyOtpActivity"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".SendOtpActivity"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".SendOtpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +25,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>
