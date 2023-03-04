@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Graduate_Android">
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+         <activity
+         android:name=".HomeActivity"
+         android:exported="false" />
         <activity
             android:name=".VerifyOtpActivity"
             android:exported="false" />
@@ -19,7 +22,7 @@
             android:name=".SendOtpActivity"
             android:exported="false" />
         <activity
-            android:name=".AccountActivity"
+            android:name=".ChartTabLayoutActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
