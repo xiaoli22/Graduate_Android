@@ -1,0 +1,10 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--默认状态-->
+    <item android:state_selected="false" android:drawable="@color/black"/>
+
+    <!--选中状态-->
+    <item android:state_selected="true" android:drawable="@color/black" >
+        <!-- 在这里设置选中的颜色和字体加粗效果 -->
+        <style android:textStyle="bold" />
+    </item>
+</selector>

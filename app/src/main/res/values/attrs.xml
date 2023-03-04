@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <declare-styleable name="CustomImageButton">-->
+<!--        <attr name="image_src" format="reference" />-->
+<!--    </declare-styleable>-->
+
+<!--    <declare-styleable name="CustomHintButton">-->
+<!--        <attr name="text_view" format="string" />-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="ImageButtonWithHint">
+        <attr name="imageButtonResource" format="reference" />
+        <attr name="hintText" format="string" />
+    </declare-styleable>
+</resources>

@@ -10,43 +10,66 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent">
 
-        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+               <com.example.graduate_android.component.CustomImageButton
+                   android:id="@+id/customImageButton"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   app:imageButtonResource="@drawable/ic_launcher_background"
+                   />
+
+
+
+            </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:text="Text"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="Text" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:text="Text"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="Text" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:text="Text"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="Text" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:text="Text"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="Text" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:text="Text"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="Text" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:text="Text"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="Text" />
 
         </LinearLayout>
 
@@ -66,11 +89,10 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:background="@android:color/white"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_menu"
             app:itemIconTint="@color/bottom_item_background"
             app:itemTextColor="@color/bottom_item_background"
-            />
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 

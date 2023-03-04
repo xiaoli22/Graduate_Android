@@ -13,7 +13,7 @@
             android:name=".MainActivity"
             android:exported="false" />
          <activity
-         android:name=".HomeActivity"
+         android:name=".ChartTabLayoutActivity"
          android:exported="false" />
         <activity
             android:name=".VerifyOtpActivity"
@@ -22,7 +22,7 @@
             android:name=".SendOtpActivity"
             android:exported="false" />
         <activity
-            android:name=".ChartTabLayoutActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
