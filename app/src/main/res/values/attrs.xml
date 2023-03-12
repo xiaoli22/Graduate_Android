@@ -8,8 +8,17 @@
 <!--        <attr name="text_view" format="string" />-->
 <!--    </declare-styleable>-->
 
-    <declare-styleable name="ImageButtonWithHint">
+    <declare-styleable name="CustomImageButton">
         <attr name="imageButtonResource" format="reference" />
         <attr name="hintText" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="CustomMessageBar">
+        <attr name="image" format="reference"/>
+        <attr name="time" format="string"/>
+        <attr name="date" format="string"/>
+        <attr name="income" format="string"/>
+        <attr name="outcome" format="string"/>
+    </declare-styleable>
+
 </resources>

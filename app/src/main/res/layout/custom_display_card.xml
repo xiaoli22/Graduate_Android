@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="20dp">
+
+
+    <TextView
+        android:id="@+id/accountType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账户类型"
+        android:textSize="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/assets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/accountType"
+        android:text="资产:"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:id="@+id/imageDC"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/accountType"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/sourceDC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageDC"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/imageDC"
+        android:text="现金账户"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/moneyDC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toLeftOf="@id/forwardR"
+        android:layout_alignBottom="@id/forwardR"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="20dp"
+        android:text="0.00"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:id="@+id/forwardR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/sourceDC"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_rforward" />
+</RelativeLayout>

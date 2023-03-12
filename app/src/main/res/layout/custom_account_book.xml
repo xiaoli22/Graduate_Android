@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="18dp"
+    android:paddingTop="15dp"
+    android:paddingRight="18dp">
+
+    <ImageView
+        android:id="@+id/imageAB"
+        android:layout_width="48dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/accountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_toRightOf="@+id/imageAB"
+        android:text="生意账本"
+        android:textSize="23dp" />
+
+    <TextView
+        android:id="@+id/creater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accountName"
+        android:layout_alignLeft="@+id/accountName"
+        android:layout_marginTop="12dp"
+        android:text="我创建的"
+        android:textSize="16dp" />
+
+    <View
+        android:id="@+id/verticalLine"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@+id/creater"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/creater"
+        android:background="@color/grey" />
+
+    <TextView
+        android:id="@+id/createrNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/creater"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/verticalLine"
+        android:text="1人"
+        android:textSize="16dp" />
+
+    <ImageButton
+        android:id="@+id/settingAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/verticalLine"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="186dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="28dp"
+        android:layout_toEndOf="@+id/accountName" />
+
+</RelativeLayout>

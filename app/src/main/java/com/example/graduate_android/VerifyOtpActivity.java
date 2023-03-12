@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+//短信验证
 public class VerifyOtpActivity extends AppCompatActivity {
 
     @Override

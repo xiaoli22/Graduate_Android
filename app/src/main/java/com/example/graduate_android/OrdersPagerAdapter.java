@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 /**
  * @author: HP
  * @date: 2023/3/3
+ * 选择器
  */
 public class OrdersPagerAdapter extends FragmentStateAdapter {
 

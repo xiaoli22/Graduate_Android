@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="#F4F7FE"
 
     tools:context=".HomeActivity">
 
@@ -15,65 +15,96 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_margin="10dp"
+                >
 
-               <com.example.graduate_android.component.CustomImageButton
-                   android:id="@+id/customImageButton"
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="vertical"
-                   app:imageButtonResource="@drawable/ic_launcher_background"
-                   />
+                <com.example.graduate_android.component.CustomImageButton
+                    android:id="@+id/customButtonA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:hintText="账户"
+                    app:imageButtonResource="@drawable/home_account" />
 
+                <com.example.graduate_android.component.CustomImageButton
+                    android:id="@+id/customButtonB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:hintText="预算"
+                    app:imageButtonResource="@drawable/home_budget"
+
+                    />
+
+                <com.example.graduate_android.component.CustomImageButton
+                    android:id="@+id/customButtonC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:hintText="社区"
+                    app:imageButtonResource="@drawable/home_community" />
+
+                <com.example.graduate_android.component.CustomImageButton
+                    android:id="@+id/customButtonD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:hintText="客服"
+                    app:imageButtonResource="@drawable/home_service" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_margin="10dp">
+
+                <com.example.graduate_android.component.CustomMessageBar
+                    android:id="@+id/customBarA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:image="@drawable/home_week"
+                    app:time="本周" />
+
+                <com.example.graduate_android.component.CustomMessageBar
+                    android:id="@+id/customBarB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:image="@drawable/home_month"
+                    app:time="本月" />
+
+                <com.example.graduate_android.component.CustomMessageBar
+                    android:id="@+id/customBarC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:image="@drawable/home_year"
+                    app:time="本年"
+                    />
 
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="Text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="Text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="Text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="Text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="Text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="Text" />
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/buttonAppBar"
@@ -100,11 +131,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
+        android:contentDescription="Add new Record"
         android:src="@drawable/ic_add"
         app:layout_anchor="@id/buttonAppBar"
-        app:maxImageSize="50dp"
-
-        />
+        app:maxImageSize="50dp" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

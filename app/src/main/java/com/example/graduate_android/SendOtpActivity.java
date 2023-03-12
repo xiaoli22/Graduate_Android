@@ -26,6 +26,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
+//短信发送登录
 public class SendOtpActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText inputMobile;

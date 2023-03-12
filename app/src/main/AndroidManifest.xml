@@ -21,10 +21,10 @@
             android:name=".VerifyOtpActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".SendOtpActivity"
             android:exported="false" />
         <activity
-            android:name=".SendOtpActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

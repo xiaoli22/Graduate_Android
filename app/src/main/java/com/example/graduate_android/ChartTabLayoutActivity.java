@@ -10,6 +10,7 @@ import android.view.View;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+//TabLayout滑动界面
 public class ChartTabLayoutActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager2;
