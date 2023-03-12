@@ -11,31 +11,29 @@
         android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/Return"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_return"
-            android:tooltipText="报表"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+        <com.example.graduate_android.component.CustomReturn
+            android:layout_marginTop="10dp"
+            android:id="@+id/returnChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:title="报表" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Return"
+            android:layout_below="@+id/returnChart"
             android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tabIndicatorColor="#EEB817"
             app:tabIndicatorFullWidth="false"
             app:tabMinWidth="90dp"
-            app:tabMode="scrollable"
+            app:tabMode="fixed"
             app:tabSelectedTextColor="#EEB817"
             app:tabTextColor="@color/black"
 

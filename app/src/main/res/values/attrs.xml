@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    <declare-styleable name="CustomImageButton">-->
-<!--        <attr name="image_src" format="reference" />-->
-<!--    </declare-styleable>-->
+    <!--    <declare-styleable name="CustomImageButton">-->
+    <!--        <attr name="image_src" format="reference" />-->
+    <!--    </declare-styleable>-->
 
-<!--    <declare-styleable name="CustomHintButton">-->
-<!--        <attr name="text_view" format="string" />-->
-<!--    </declare-styleable>-->
+    <!--    <declare-styleable name="CustomHintButton">-->
+    <!--        <attr name="text_view" format="string" />-->
+    <!--    </declare-styleable>-->
 
     <declare-styleable name="CustomImageButton">
         <attr name="imageButtonResource" format="reference" />
@@ -14,11 +14,15 @@
     </declare-styleable>
 
     <declare-styleable name="CustomMessageBar">
-        <attr name="image" format="reference"/>
-        <attr name="time" format="string"/>
-        <attr name="date" format="string"/>
-        <attr name="income" format="string"/>
-        <attr name="outcome" format="string"/>
+        <attr name="image" format="reference" />
+        <attr name="time" format="string" />
+        <attr name="date" format="string" />
+        <attr name="income" format="string" />
+        <attr name="outcome" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomReturn">
+        <attr name="title" format="string" />
     </declare-styleable>
 
 </resources>

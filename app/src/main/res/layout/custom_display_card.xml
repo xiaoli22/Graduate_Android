@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/accountType"
+        android:id="@+id/accountTypeDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="账户类型"
@@ -17,11 +17,11 @@
         />
 
     <TextView
-        android:id="@+id/assets"
+        android:id="@+id/assetDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/accountType"
+        android:layout_toRightOf="@+id/accountTypeDC"
         android:text="资产:"
         android:textSize="10dp" />
 
@@ -29,7 +29,7 @@
         android:id="@+id/imageDC"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_below="@+id/accountType"
+        android:layout_below="@+id/accountTypeDC"
         android:layout_marginTop="9dp"
         android:src="@drawable/ic_launcher_background" />
 
