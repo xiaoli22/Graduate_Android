@@ -2,6 +2,8 @@ package com.example.graduate_android;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
@@ -28,19 +30,22 @@ public class ChartTabLayoutActivity extends AppCompatActivity {
         //TabLayout\
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewPager);
-
         returnChart = findViewById(R.id.returnChart);
 
+        String[] tabs = {"基础统计", "账户", "成员", "项目"};
+
+        // 监听返回按钮
         returnChart.setOnClickListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChartTabLayoutActivity.this,HomeActivity.class);
+                Intent intent = new Intent(ChartTabLayoutActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
 
-
         viewPager2.setAdapter(new OrdersPagerAdapter(this));
+
+
 
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override

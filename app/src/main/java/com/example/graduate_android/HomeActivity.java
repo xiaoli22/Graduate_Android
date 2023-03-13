@@ -16,6 +16,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
     private CustomImageButton customD;
     private LineChart lineChart;
     private BottomNavigationView bottomNavigation;
+    private FloatingActionButton add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +44,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         customD = findViewById(R.id.customButtonD);
         lineChart = findViewById(R.id.lineChart);
         bottomNavigation = findViewById(R.id.bottomNavigation);
+        add = findViewById(R.id.add);
 
         bottomNavigation.setOnItemSelectedListener(this);
 
         ArrayList<Entry> dataList1 = new ArrayList<>();
         ArrayList<Entry> dataList2 = new ArrayList<>();
-        Entry entry1 = new Entry(100,200);
-        Entry entry2 = new Entry(200,300);
-        Entry entry3 = new Entry(300,800);
-        Entry entry4 = new Entry(400,200);
-        Entry entry5 = new Entry(500,600);
+        Entry entry1 = new Entry(100, 200);
+        Entry entry2 = new Entry(200, 300);
+        Entry entry3 = new Entry(300, 800);
+        Entry entry4 = new Entry(400, 200);
+        Entry entry5 = new Entry(500, 600);
         dataList1.add(entry1);
         dataList1.add(entry2);
         dataList1.add(entry3);
@@ -59,12 +62,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         dataList1.add(entry5);
 
 
-
-        Entry entry10 = new Entry(100,0);
-        Entry entry6 = new Entry(200,50);
-        Entry entry7 = new Entry(300,150);
-        Entry entry8 = new Entry(400,200);
-        Entry entry9 = new Entry(500,600);
+        Entry entry10 = new Entry(100, 0);
+        Entry entry6 = new Entry(200, 50);
+        Entry entry7 = new Entry(300, 150);
+        Entry entry8 = new Entry(400, 200);
+        Entry entry9 = new Entry(500, 600);
         dataList2.add(entry10);
         dataList2.add(entry6);
         dataList2.add(entry7);
@@ -83,8 +85,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         dataSet2.setCircleColor(Color.RED);
 
 
-
-
         // 将数据集添加到 LineChart
         List<ILineDataSet> dataSets = new ArrayList<>();
         dataSets.add(dataSet1);
@@ -94,6 +94,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         lineChart.invalidate();
 
 
+        /*
+        * 监听顶部的四个按钮
+        *
+        * */
         customA.setOnClickListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,9 +134,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
             }
         });
 
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this,BookKeepTabLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
+    //底部导航栏按钮监听
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -141,7 +154,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
 
                 break;
             case R.id.chart:
-                Intent intent = new Intent(this,ChartTabLayoutActivity.class);
+                Intent intent = new Intent(this, ChartTabLayoutActivity.class);
                 startActivity(intent);
                 break;
 
