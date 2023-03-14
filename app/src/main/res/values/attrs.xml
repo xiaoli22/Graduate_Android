@@ -34,7 +34,13 @@
         <attr name="outcomeM" format="string" />
     </declare-styleable>
 
-
+    <declare-styleable name="CustomDisplayCard">
+        <attr name="accountD" format="string"/>
+        <attr name="assetD" format="string"/>
+        <attr name="imageD" format="reference"/>
+        <attr name="sourceD" format="string"/>
+        <attr name="moneyD" format="string"/>
+    </declare-styleable>
 
 
 </resources>

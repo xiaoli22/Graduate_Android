@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="25dp"
-    android:paddingRight="25dp"
-    android:paddingTop="20dp">
+    android:layout_height="80dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    >
 
 
     <TextView
-        android:id="@+id/accountTypeDC"
+        android:id="@+id/accountDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="账户类型"
-        android:textSize="10dp"
+        android:textSize="13dp"
+        android:textColor="@color/black"
 
         />
 
@@ -20,18 +22,20 @@
         android:id="@+id/assetDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/accountDC"
         android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/accountTypeDC"
+        android:layout_toRightOf="@+id/accountDC"
         android:text="资产:0.00"
-        android:textSize="10dp" />
+        android:textSize="12dp"
+        android:textColor="@color/black"/>
 
     <ImageView
 
         android:id="@+id/imageDC"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/accountTypeDC"
-        android:layout_marginTop="12dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/accountDC"
+        android:layout_marginTop="14dp"
         android:src="@drawable/ic_launcher_background" />
 
     <TextView
@@ -40,28 +44,28 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageDC"
         android:layout_marginLeft="12dp"
+        android:layout_marginTop="1dp"
         android:layout_toRightOf="@+id/imageDC"
         android:text="现金账户"
-        android:textSize="15dp" />
+        android:textSize="17dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/moneyDC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_toLeftOf="@id/forwardR"
         android:layout_alignBottom="@id/forwardR"
-        android:layout_marginBottom="3dp"
         android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/forwardR"
         android:text="0.00"
-        android:textSize="14dp" />
+        android:textSize="16dp" />
 
     <ImageView
         android:id="@+id/forwardR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/sourceDC"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignTop="@+id/sourceDC"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
         android:src="@drawable/ic_rforward" />
 </RelativeLayout>

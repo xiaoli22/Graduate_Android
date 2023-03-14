@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class CustomMessageShow extends LinearLayout {
         numberM = a.getString(R.styleable.CustomMessageShow_numberM);
         incomeM = a.getString(R.styleable.CustomMessageShow_incomeM);
         outcomeM = a.getString(R.styleable.CustomMessageShow_outcomeM);
+        a.recycle();
 
         init();
 
@@ -42,6 +44,7 @@ public class CustomMessageShow extends LinearLayout {
         TextView numberMS = findViewById(R.id.numberMS);
         TextView incomeMS = findViewById(R.id.incomeMS);
         TextView outcomeMS = findViewById(R.id.outcomeMS);
+        ImageView imageMS = findViewById(R.id.imageMS);
 
         if (titleM != null) {
             toadyMs.setText(titleM);
@@ -54,6 +57,9 @@ public class CustomMessageShow extends LinearLayout {
         }
         if (outcomeM != null) {
             outcomeMS.setText(outcomeM);
+        }
+        if (imageM!=0){
+            imageMS.setImageResource(imageM);
         }
 
 

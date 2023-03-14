@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FE"
+    android:orientation="vertical"
+
+    tools:context=".AccountActivity">
+
+
+    <com.example.graduate_android.component.CustomReturn
+        android:id="@+id/returnA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="账户" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.graduate_android.component.CustomMessageShow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:imageM="@drawable/account_image"
+                app:titleM="" />
+
+
+            <com.example.graduate_android.component.CustomDisplayCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                app:accountD="现金账户"
+                app:imageD="@drawable/account_cash"
+                app:moneyD="0.00"
+                app:sourceD="现金账户" />
+
+            <com.example.graduate_android.component.CustomDisplayCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                app:accountD="金融账户"
+                app:imageD="@drawable/account_card2"
+                app:moneyD="0.00"
+                app:sourceD="银行卡"
+
+                />
+
+            <com.example.graduate_android.component.CustomDisplayCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                app:accountD="支付宝"
+                app:imageD="@drawable/account_zhifubao"
+                app:moneyD="0.00"
+                app:sourceD="支付宝" />
+
+            <com.example.graduate_android.component.CustomDisplayCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                app:accountD="微信钱包"
+                app:imageD="@drawable/account_weixin"
+                app:moneyD="0.00"
+                app:sourceD="微信钱包" />
+
+            <com.example.graduate_android.component.CustomDisplayCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                app:accountD="信用卡"
+                app:imageD="@drawable/account_card"
+                app:moneyD="0.00"
+                app:sourceD="信用卡" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

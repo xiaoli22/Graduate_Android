@@ -23,7 +23,6 @@
             <com.example.graduate_android.component.CustomReturn
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 app:title="生意账本" />
 
 
@@ -76,6 +75,9 @@
             </LinearLayout>
 
             <com.example.graduate_android.component.CustomMessageShow
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
             </com.example.graduate_android.component.CustomMessageShow>
