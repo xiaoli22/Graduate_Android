@@ -22,15 +22,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/accountTypeDC"
-        android:text="资产:"
+        android:text="资产:0.00"
         android:textSize="10dp" />
 
     <ImageView
+
         android:id="@+id/imageDC"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/accountTypeDC"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="12dp"
         android:src="@drawable/ic_launcher_background" />
 
     <TextView

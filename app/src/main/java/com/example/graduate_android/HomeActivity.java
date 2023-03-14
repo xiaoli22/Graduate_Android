@@ -10,6 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.graduate_android.component.CustomImageButton;
+import com.example.graduate_android.component.CustomMessageBar;
+import com.example.graduate_android.utils.DateTimeUtils;
+import com.example.graduate_android.utils.RippleUtils;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
@@ -32,20 +35,46 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
     private LineChart lineChart;
     private BottomNavigationView bottomNavigation;
     private FloatingActionButton add;
+    private CustomMessageBar customBarA;
+    private CustomMessageBar customBarB;
+    private CustomMessageBar customBarC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //顶部的4个自定义ImageView+TextView组成的按钮
         customA = findViewById(R.id.customButtonA);
         customB = findViewById(R.id.customButtonB);
         customC = findViewById(R.id.customButtonC);
         customD = findViewById(R.id.customButtonD);
+
+        //调表库组件
         lineChart = findViewById(R.id.lineChart);
-        bottomNavigation = findViewById(R.id.bottomNavigation);
         add = findViewById(R.id.add);
 
+        //信息展示组件CustomMessageBar
+        customBarA = findViewById(R.id.customBarA);
+        customBarB = findViewById(R.id.customBarB);
+        customBarC = findViewById(R.id.customBarC);
+
+        customBarA.setDateMB(DateTimeUtils.getDateOfCurrentWeek());
+        customBarB.setDateMB(DateTimeUtils.getMonthFirstAndLastDay());
+        customBarC.setDateMB(DateTimeUtils.getCurrentYear()+"年");
+
+
+        customBarA.setOnClickListeners(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, SendOtpActivity.class);
+                customBarA.setBackground(RippleUtils.createRippleDrawable(HomeActivity.this, R.color.ripple_color, R.drawable.my_select));
+                startActivity(intent);
+            }
+        });
+
+
+        bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setOnItemSelectedListener(this);
 
         ArrayList<Entry> dataList1 = new ArrayList<>();
@@ -95,9 +124,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
 
 
         /*
-        * 监听顶部的四个按钮
-        *
-        * */
+         * 监听顶部的四个按钮
+         *
+         * */
         customA.setOnClickListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,6 +135,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
 
             }
         });
+
 
         customB.setOnClickListeners(new View.OnClickListener() {
             @Override
@@ -137,7 +167,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this,BookKeepTabLayoutActivity.class);
+                Intent intent = new Intent(HomeActivity.this, BookKeepTabLayoutActivity.class);
                 startActivity(intent);
             }
         });
