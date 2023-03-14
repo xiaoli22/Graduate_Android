@@ -1,9 +1,14 @@
-package com.example.graduate_android;
+package com.example.graduate_android.fragmentchart;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.graduate_android.fragmentchart.AccountFragment;
+import com.example.graduate_android.fragmentchart.BaseFragment;
+import com.example.graduate_android.fragmentchart.MenbersFragment;
+import com.example.graduate_android.fragmentchart.ProjectFragment;
 
 /**
  * @author: HP

@@ -1,14 +1,9 @@
-package com.example.graduate_android.fragments;
+package com.example.graduate_android.fragmentadd;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-
-import com.example.graduate_android.AccountFragment;
-import com.example.graduate_android.BaseFragment;
-import com.example.graduate_android.MenbersFragment;
-import com.example.graduate_android.ProjectFragment;
 
 public class OrdersPagerAdapter2 extends FragmentStateAdapter {
 

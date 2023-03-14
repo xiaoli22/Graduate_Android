@@ -4,9 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-import com.example.graduate_android.fragments.OrdersPagerAdapter2;
+import com.example.graduate_android.component.CustomReturn;
+import com.example.graduate_android.fragmentadd.OrdersPagerAdapter2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -14,6 +17,7 @@ public class BookKeepTabLayoutActivity extends AppCompatActivity {
 
     private TabLayout tabLayoutBK;
     private ViewPager2 viewPager2Bk;
+    private CustomReturn returnBK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,16 @@ public class BookKeepTabLayoutActivity extends AppCompatActivity {
 
         tabLayoutBK = findViewById(R.id.tabLayoutBK);
         viewPager2Bk = findViewById(R.id.viewPagerBK);
+        returnBK = findViewById(R.id.returnBK);
+
+        //返回按钮监听
+        returnBK.setOnClickListeners(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BookKeepTabLayoutActivity.this,HomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         viewPager2Bk.setAdapter(new OrdersPagerAdapter2(this));

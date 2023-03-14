@@ -15,11 +15,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <com.example.graduate_android.component.CustomReturn
+            android:id="@+id/returnBK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:title="记一笔" />
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayoutBK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/returnBK"
             android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
