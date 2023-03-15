@@ -2,5 +2,20 @@
     <string name="app_name">Graduate_Android</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="userBook">尊敬的用户,-->
+    <!--        我们非常抱歉因为我们的app客服功能目前还在制作中，给您带来了不便和不好的体验。我们知道这给您带来了很多麻烦和不便，对此我们深感抱歉.我们一直致力于提供高质量的服务，但是我们的客服功能出现了一些挑战，我们正在全力以赴解决这个问题，以保证我们的客户能够正常地使用和得到支持。我们很快就会为您提供完善的客户服务体验。-->
+    <!--        我们衷心感谢您对我们的支持和信任，我们会尽快提供最佳的客户服务体验，保证您得到及时、周到的支持与帮助。-->
+    <!--        如果您有任何问题或意见，请随时联系我们的客服人员（联系方式请查看我们的官网），我们会及时回复并尽全力为您提供帮助。-->
+    <!--        再次向您致以最诚挚的歉意，感谢您一直以来对我们的支持与信任。\n此致, \n\u0020\u0020NeWa团队</string>-->
+    <string name="userBook">
+        <![CDATA[
+            <p style="white-space: pre;">尊敬的用户,
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们非常抱歉因为我们的app客服功能目前还在制作中，给您带来了很多麻烦和不便，对此我们深感抱歉.我们一直致力于提供高质量的服务，但是我们的客服功能出现了一些问题，我们正在全力以赴解决这个问题，以保证我们的客户能够正常地使用app并且得到支持。我们很快就会为您提供完善的客户服务体验。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您有任何问题或意见，请随时联系我们的客服人员（联系方式1879847326@qq.com），我们会及时回复并尽全力为您提供帮助。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;再次向您致以最诚挚的歉意，感谢您一直以来对我们的支持与信任。<br>此致,
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NeWa团队</p>
+        ]]>
+    </string>
+
 
 </resources>
