@@ -32,10 +32,10 @@ public class CustomInput extends LinearLayout {
     private void init() {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         inflater.inflate(R.layout.custom_add_input,this);
-
         EditText editTextI = findViewById(R.id.editTextAI);
         View viewI = findViewById(R.id.viewAI);
         if (color!=0xffe19a01){
+            editTextI.setHintTextColor(color);
             editTextI.setTextColor(color);
             viewI.setBackgroundColor(color);
         }

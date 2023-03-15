@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".fragmentadd.OutcomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+
+    <com.example.graduate_android.component.CustomInput
+        android:id="@+id/inputAN"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="outcome Information"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-</FrameLayout>
+        app:textColor="#0DB314"
+        />
+
+
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalA"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/inputAN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:types="account"
+
+        />
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalB"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/addnormalA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:types="time"
+        />
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalC"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/addnormalB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:types="member"
+        />
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalD"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/addnormalC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:types="project"
+        />
+
+
+</RelativeLayout>

@@ -42,5 +42,14 @@
         <attr name="moneyD" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="CustomAddNormal">
+        <attr name="imageN" format="reference"/>
+        <attr name="typeN" format="string"/>
+        <attr name="dataN" format="string"/>
+        <attr name="types" format="string"/>
+    </declare-styleable>
+
+
+
 
 </resources>
