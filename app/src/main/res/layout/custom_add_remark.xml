@@ -3,46 +3,46 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginRight="20dp"
-    android:orientation="horizontal">
-
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp">
 
     <ImageView
-        android:id="@+id/imageAN"
+        android:id="@+id/imageAR"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
-        android:id="@+id/typeAN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/imageAN"
-        android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@+id/imageAN"
-        android:text="类型"
+        android:id="@+id/typeAR"
         style="@style/CustomTypeStyle"
-        />
-
-    <TextView
-        android:id="@+id/dataAN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageAR"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/imageAR"
+        android:text="类型" />
+
+    <EditText
+        android:id="@+id/dataAR"
+        style="@style/CustomDataStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageAR"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="2dp"
-        android:layout_toRightOf="@+id/typeAN"
-        android:layout_alignBottom="@id/imageAN"
-        android:text="相关数据"
-        style="@style/CustomDataStyle"
-        />
+        android:layout_toRightOf="@+id/typeAR"
+        android:backgroundTint="@android:color/transparent"
+        android:hint="..."
+        android:paddingBottom="1dp"
+        android:textColorHint="@color/black" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@+id/dataAN"
+        android:layout_below="@+id/dataAR"
         android:layout_marginTop="15dp"
         android:background="#EEEBEB"></View>
+
 
 </RelativeLayout>

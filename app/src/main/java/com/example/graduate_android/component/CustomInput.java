@@ -21,7 +21,7 @@ public class CustomInput extends LinearLayout {
         super(context, attrs);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomInput);
         text = typedArray.getString(R.styleable.CustomInput_text);
-        color = typedArray.getColor(R.styleable.CustomInput_textColor,0xffe19a01);
+        color = typedArray.getColor(R.styleable.CustomInput_textColor,0);
 
         typedArray.recycle();
         init();
@@ -34,10 +34,14 @@ public class CustomInput extends LinearLayout {
         inflater.inflate(R.layout.custom_add_input,this);
         EditText editTextI = findViewById(R.id.editTextAI);
         View viewI = findViewById(R.id.viewAI);
-        if (color!=0xffe19a01){
+        if (color!=0){
             editTextI.setHintTextColor(color);
             editTextI.setTextColor(color);
             viewI.setBackgroundColor(color);
+        }else {
+            editTextI.setHintTextColor(0xffe19a01);
+            editTextI.setTextColor(0xffe19a01);
+            viewI.setBackgroundColor(0xffe19a01);
         }
 
         if (text!=null){

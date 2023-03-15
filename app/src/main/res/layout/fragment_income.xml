@@ -1,19 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragmentadd.IncomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.example.graduate_android.component.CustomInput
+        android:id="@+id/inputIncome"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Income Information"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:textColor="#ED5221" />
 
-</FrameLayout>
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalNA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputIncome"
+        app:types="account"
+
+        />
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalNB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addnormalNA"
+        app:types="time" />
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalNC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addnormalNB"
+        app:types="member" />
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalND"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addnormalNC"
+        app:types="project" />
+
+    <com.example.graduate_android.component.CustomAddRemark
+        android:id="@+id/editIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addnormalND" />
+
+</RelativeLayout>

@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragmentadd.ReimbursementFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <com.example.graduate_android.component.CustomInput
+        android:id="@+id/inputReimBurse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalRA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputReimBurse"
+        app:types="account" />
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalRB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addnormalRA"
+        app:types="time" />
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalRC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addnormalRB"
+        app:types="member" />
+
+
+    <com.example.graduate_android.component.CustomAddRemark
+        android:id="@+id/editReimBurse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addnormalRC" />
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@+id/editReimBurse"
+        android:text="ReimBursement Information"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+</RelativeLayout>

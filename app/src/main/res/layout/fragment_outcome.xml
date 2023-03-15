@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragmentadd.OutcomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <com.example.graduate_android.component.CustomInput
-        android:id="@+id/inputAN"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:id="@+id/inputOutcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:textColor="#0DB314"
-        />
-
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:textColor="#0DB314" />
 
 
     <com.example.graduate_android.component.CustomAddNormal
         android:id="@+id/addnormalA"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/inputAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/inputOutcome"
         app:types="account"
-
         />
+
     <com.example.graduate_android.component.CustomAddNormal
         android:id="@+id/addnormalB"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/addnormalA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:types="time"
-        />
+        android:layout_below="@+id/addnormalA"
+        app:types="time" />
+
     <com.example.graduate_android.component.CustomAddNormal
         android:id="@+id/addnormalC"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/addnormalB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:types="member"
-        />
+        android:layout_below="@+id/addnormalB"
+        app:types="member" />
+
     <com.example.graduate_android.component.CustomAddNormal
         android:id="@+id/addnormalD"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/addnormalC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:types="project"
-        />
+        android:layout_below="@+id/addnormalC"
+        app:types="project" />
+
+    <com.example.graduate_android.component.CustomAddRemark
+        android:id="@+id/editOutcome"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addnormalD" />
 
 
 </RelativeLayout>

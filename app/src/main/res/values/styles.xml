@@ -4,4 +4,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="CustomTypeStyle">
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="CustomDataStyle">
+        <item name="android:textSize">19dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 </resources>

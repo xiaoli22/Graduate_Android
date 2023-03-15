@@ -49,7 +49,11 @@
         <attr name="types" format="string"/>
     </declare-styleable>
 
-
+    <declare-styleable name="CustomAddRemark">
+        <attr name="imageR" format="reference"/>
+        <attr name="typeR" format="string"/>
+        <attr name="dataR" format="string"/>
+    </declare-styleable>
 
 
 </resources>

@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragmentadd.BalanceFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <com.example.graduate_android.component.CustomInput
+        android:id="@+id/inputBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <com.example.graduate_android.component.CustomAddNormal
+        android:id="@+id/addnormalBA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputBalance"
+        app:types="account"
+        />
+
+
+
+    <com.example.graduate_android.component.CustomAddRemark
+        android:id="@+id/editBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addnormalBA" />
+
     <TextView
+        android:layout_below="@+id/editBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -14,4 +39,4 @@
         android:textSize="35dp"
         android:textStyle="bold" />
 
-</FrameLayout>
+</RelativeLayout>
