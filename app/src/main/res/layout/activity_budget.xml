@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BudgetActivity">
+
+
+    <com.example.graduate_android.component.CustomReturn
+        android:id="@+id/returnB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="预算中心" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/returnB"
+        android:layout_marginTop="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.example.graduate_android.component.CustomMessageShow
+                android:id="@+id/messageShowB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:imageM="@drawable/budget_image"
+                app:incomeM="已用"
+                app:outcomeM="可用"
+                app:titleM="" />
+
+
+            <com.example.graduate_android.component.CustomBudgetShow
+                android:id="@+id/budgetShowA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/messageShowB"
+                app:imageS="@drawable/budget_goods"
+                app:titleS="货物材料" />
+
+            <com.example.graduate_android.component.CustomBudgetShow
+                android:id="@+id/budgetShowB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budgetShowA"
+                app:imageS="@drawable/budget_outcome"
+                app:titleS="人工支出" />
+
+            <com.example.graduate_android.component.CustomBudgetShow
+                android:id="@+id/budgetShowC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budgetShowB"
+                app:imageS="@drawable/budget_operation"
+                app:titleS="运营费用" />
+
+            <com.example.graduate_android.component.CustomBudgetShow
+                android:id="@+id/budgetShowD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budgetShowC"
+                app:imageS="@drawable/budget_enterprises"
+                app:titleS="固定资产" />
+
+            <com.example.graduate_android.component.CustomBudgetShow
+                android:id="@+id/budgetShowE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budgetShowD"
+                app:imageS="@drawable/budget_finance"
+                app:titleS="财务费用" />
+
+            <com.example.graduate_android.component.CustomBudgetShow
+                android:id="@+id/budgetShowF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budgetShowE"
+                app:imageS="@drawable/budget_shareholder"
+                app:titleS="股东支出" />
+
+            <com.example.graduate_android.component.CustomBudgetShow
+                android:id="@+id/budgetShowG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budgetShowF"
+                app:imageS="@drawable/budget_others"
+                app:titleS="其他杂项" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

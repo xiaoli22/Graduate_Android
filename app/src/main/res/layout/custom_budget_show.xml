@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp">
+
+
+    <ImageView
+        android:id="@+id/imageBS"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="14dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/titleBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/imageBS"
+        android:text="支出类型"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/budgetBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBS"
+        android:layout_alignLeft="@id/titleBS"
+        android:layout_marginTop="7dp"
+        android:text="支出预算 未设置"
+        android:textColor="#AEACAC"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBS"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/titleBS"
+        android:layout_alignLeft="@id/titleBS"
+        android:layout_marginTop="7dp"
+        android:layout_toLeftOf="@id/returnBS"
+        android:max="100"
+        android:progressBackgroundTint="@color/item_background"
+        android:progressTint="@color/orange" />
+
+    <TextView
+        android:id="@+id/balanceBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/titleBS"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="23dp"
+        android:text="余额:0.00"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/returnBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balanceBS"
+        android:layout_alignBottom="@id/imageBS"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_rforward" />
+
+</RelativeLayout>

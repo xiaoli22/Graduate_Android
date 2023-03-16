@@ -10,8 +10,9 @@
 
     <ImageView
         android:id="@+id/imageAN"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_foreground" />
 
@@ -19,8 +20,9 @@
         android:id="@+id/typeAN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/imageAN"
+        android:layout_alignTop="@id/imageAN"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="3dp"
         android:layout_toRightOf="@+id/imageAN"
         android:text="类型"
         style="@style/CustomTypeStyle"
@@ -33,7 +35,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="2dp"
         android:layout_toRightOf="@+id/typeAN"
-        android:layout_alignBottom="@id/imageAN"
+        android:layout_alignTop="@id/imageAN"
         android:text="相关数据"
         style="@style/CustomDataStyle"
         />

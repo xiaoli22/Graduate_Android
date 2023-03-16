@@ -38,7 +38,7 @@ public class CustomAddRemark extends RelativeLayout {
             String dataR = a.getString(R.styleable.CustomAddRemark_dataR);
 
             typeAR.setText("备注");
-            imageAR.setImageResource(R.drawable.account_card);
+            imageAR.setImageResource(R.drawable.book_note);
             dataAR.setHint("...");
 
 

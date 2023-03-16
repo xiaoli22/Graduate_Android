@@ -8,9 +8,10 @@
 
     <ImageView
         android:id="@+id/imageAR"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:scaleType="fitXY"
+        android:layout_marginTop="5dp"
         android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
@@ -19,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/imageAR"
+        android:layout_marginTop="3dp"
         android:layout_marginLeft="8dp"
         android:layout_toRightOf="@+id/imageAR"
         android:text="类型" />

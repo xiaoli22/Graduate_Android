@@ -55,5 +55,12 @@
         <attr name="dataR" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="CustomBudgetShow">
+        <attr name="imageS" format="reference"/>
+        <attr name="titleS" format="string"/>
+        <attr name="budgetS" format="string"/>
+        <attr name="balanceS" format="string"/>
+        <attr name="progressS" format="integer"/>
+    </declare-styleable>
 
 </resources>

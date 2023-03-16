@@ -140,7 +140,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         customB.setOnClickListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, SendOtpActivity.class);
+                Intent intent = new Intent(HomeActivity.this, BudgetActivity.class);
                 startActivity(intent);
 
             }
@@ -179,12 +179,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        Intent intent = new Intent();
         switch (item.getItemId()) {
             case R.id.water:
-
+                intent.setClass(this, WaterActivity.class);
+                startActivity(intent);
                 break;
             case R.id.chart:
-                Intent intent = new Intent(this, ChartTabLayoutActivity.class);
+                intent.setClass(this, ChartTabLayoutActivity.class);
                 startActivity(intent);
                 break;
 
