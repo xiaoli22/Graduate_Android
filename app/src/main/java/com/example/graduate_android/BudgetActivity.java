@@ -5,34 +5,54 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.graduate_android.adpater.BudgetAdapter;
+import com.example.graduate_android.bean.Budget;
 import com.example.graduate_android.component.CustomBudgetShow;
 import com.example.graduate_android.component.CustomReturn;
 
-public class BudgetActivity extends AppCompatActivity {
+import java.util.List;
 
-    private CustomReturn returnS;
-    private Intent intent=new Intent();
+public class BudgetActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
+    private CustomReturn returnB;
+    private Intent intent = new Intent();
     private CustomBudgetShow budgetShowA;
+    private List<Budget> budgetList;
+    private ListView listViewB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
-        returnS = findViewById(R.id.returnB);
-        budgetShowA = findViewById(R.id.budgetShowA);
 
-        budgetShowA.setProgressBS(50);
+        returnB = findViewById(R.id.returnB);
+        listViewB = findViewById(R.id.listViewB);
 
+        //获取初始数据
+        budgetList = Budget.getDefaultList();
+        BudgetAdapter budgetAdapter = new BudgetAdapter(this, budgetList);
+        //数据与视图绑定
+        listViewB.setAdapter(budgetAdapter);
+        listViewB.setOnItemClickListener(this);
 
-        returnS.setOnClickListeners(new View.OnClickListener() {
-
-
+        returnB.setOnClickListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = intent.setClass(BudgetActivity.this, HomeActivity.class);
-                startActivity(intent);
+                intent = new Intent(BudgetActivity.this, HomeActivity.class);
             }
         });
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(this, "你点击了第" + budgetList.get(position).getType(), Toast.LENGTH_SHORT).show();
+        intent = new Intent(BudgetActivity.this, BudgetTwoActivity.class);
+        intent.putExtra("position", position + 1);
+        startActivity(intent);
+
     }
 }

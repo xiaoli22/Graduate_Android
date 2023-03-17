@@ -5,33 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BudgetActivity">
-
+    tools:context=".BudgetTwoActivity">
 
     <com.example.graduate_android.component.CustomReturn
-        android:id="@+id/returnB"
+        android:id="@+id/returnBT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="预算中心" />
-
-    <com.example.graduate_android.component.CustomMessageShow
-        android:id="@+id/messageShowB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:imageM="@drawable/budget_image"
-        app:incomeM="已用"
-        app:outcomeM="可用"
-        app:titleM="" />
+        app:title="二级预算" />
 
     <ListView
-        android:id="@+id/listViewB"
+        android:id="@+id/listViewBT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="5dp"
         android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        />
-
+        android:dividerHeight="0dp" />
 
 </LinearLayout>

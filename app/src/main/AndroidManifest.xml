@@ -15,6 +15,9 @@
             android:name=".WaterActivity"
             android:exported="false" />
         <activity
+            android:name=".BudgetTwoActivity"
+            android:exported="false" />
+        <activity
             android:name=".BudgetActivity"
             android:exported="false" />
         <activity
