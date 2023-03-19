@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/timeWD"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
+        android:gravity="center"
+        android:text="15号\n周三"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/imageWD"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
+        android:layout_alignTop="@+id/timeWD"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/timeWD"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/typeWD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imageWD"
+        android:text="类型"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/detailsWD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/typeWD"
+        android:layout_alignLeft="@id/typeWD"
+        android:layout_marginTop="5dp"
+        android:text="时间+账户类型+用户"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/incomeWD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/typeWD"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:text="0.00"
+        android:textSize="25sp" />
+
+
+</RelativeLayout>

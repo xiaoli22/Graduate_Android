@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/timeWL"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
+        android:gravity="center"
+        android:text="2023年3月"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+
+    <TextView
+        android:id="@+id/numberWL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/timeWL"
+        android:layout_marginTop="7dp"
+        android:gravity="bottom"
+        android:text="0.00"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/numberWL"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toRightOf="@+id/numberWL"
+        android:text="结余" />
+
+    <TextView
+        android:id="@+id/incomeWL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberWL"
+        android:layout_alignLeft="@id/numberWL"
+        android:text="总收入0.00"
+        android:textColor="@color/grey"
+        android:textSize="15sp" />
+
+
+    <View
+        android:id="@+id/viewWL"
+        android:layout_width="2dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@+id/incomeWL"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/incomeWL"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/outcomeWL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/incomeWL"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/viewWL"
+        android:text="总支出 0.00"
+        android:textColor="@color/grey"
+        android:textSize="15sp" />
+</RelativeLayout>

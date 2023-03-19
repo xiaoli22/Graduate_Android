@@ -5,26 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".WaterActivity">
+    tools:context=".WaterDetailsActivity">
 
     <com.example.graduate_android.component.CustomReturn
-        android:id="@+id/returnW"
+        android:id="@+id/returnWD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="2023年" />
-
-    <com.example.graduate_android.component.CustomMessageShow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:imageM="@drawable/water_image"
-        app:titleM="" />
+        app:title="流水详情" />
 
     <ListView
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/listViewW"
+        android:id="@+id/listViewWD"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp" />
 
 </LinearLayout>

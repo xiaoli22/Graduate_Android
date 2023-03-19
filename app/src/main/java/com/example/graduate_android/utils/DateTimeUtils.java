@@ -52,4 +52,36 @@ public class DateTimeUtils {
         String monthLastDay = f.format(calendar.getTime());
         return monthFirstDay + "-" + monthLastDay;
     }
+
+    //得到时间：year年month月
+    public static String getCurrentYearAndMonth() {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH) + 1;
+        return year + "年" + month + "月";
+    }
+
+    //  获得今天是星期几
+    public static String getDayOfWeek() {
+        Calendar calendar = Calendar.getInstance();
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+        switch (dayOfWeek) {
+            case Calendar.SUNDAY:
+                return "星期日";
+            case Calendar.MONDAY:
+                return "星期一";
+            case Calendar.TUESDAY:
+                return "星期二";
+            case Calendar.WEDNESDAY:
+                return "星期三";
+            case Calendar.THURSDAY:
+                return "星期四";
+            case Calendar.FRIDAY:
+                return "星期五";
+            case Calendar.SATURDAY:
+                return "星期六";
+            default:
+                return "";
+        }
+    }
 }

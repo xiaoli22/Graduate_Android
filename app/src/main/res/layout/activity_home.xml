@@ -112,49 +112,48 @@
                     app:image="@drawable/home_year"
                     app:time="本年" />
 
-
             </LinearLayout>
 
 
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/lineChart"
-                android:layout_width="match_parent"
-                android:layout_height="180dp"/>
+<!--            <com.github.mikephil.charting.charts.LineChart-->
+<!--                android:id="@+id/lineChart"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="180dp"/>-->
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="You will quickly finish this"
-                android:textSize="30dp" />
-            <TextView
-                android:gravity="center"
-                android:text="You will quickly finish this"
-                android:textSize="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:gravity="center"
-                android:text="You will quickly finish this"
-                android:textSize="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:gravity="center"
-                android:text="You will quickly finish this"
-                android:textSize="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:gravity="center"
-                android:text="You will quickly finish this"
-                android:textSize="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="65dp"/>
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="You will quickly finish this"-->
+<!--                android:textSize="30dp" />-->
+<!--            <TextView-->
+<!--                android:gravity="center"-->
+<!--                android:text="You will quickly finish this"-->
+<!--                android:textSize="30dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <TextView-->
+<!--                android:gravity="center"-->
+<!--                android:text="You will quickly finish this"-->
+<!--                android:textSize="50dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <TextView-->
+<!--                android:gravity="center"-->
+<!--                android:text="You will quickly finish this"-->
+<!--                android:textSize="30dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <TextView-->
+<!--                android:gravity="center"-->
+<!--                android:text="You will quickly finish this"-->
+<!--                android:textSize="30dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="65dp"/>-->
         </LinearLayout>
 
 
@@ -186,7 +185,7 @@
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#FFFFFF"
         android:contentDescription="Add new Record"
         android:src="@drawable/ic_add"
         app:layout_anchor="@id/buttonAppBar"
