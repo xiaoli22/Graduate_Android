@@ -5,21 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/my_select"
-    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".testActivity">
 
-<!--    <ProgressBar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="3dp"-->
-<!--        android:max="100"-->
-<!--        android:progress="50" />-->
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:progress="50"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:progressTint="@color/orange"
-        />
 
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/progressBar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="2dp"-->
+    <!--        android:progress="50"-->
+    <!--        style="@android:style/Widget.ProgressBar.Horizontal"-->
+    <!--        android:progressTint="@color/orange"-->
+    <!--        />-->
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="测试中"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="星星适配器"-->
+<!--        android:textSize="17sp" />-->
+    <com.example.graduate_android.component.CustomMessageShow
+        android:id="@+id/testShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:imageM="@drawable/budget_shareholder"/>
+
+
+    <Spinner
+        android:id="@+id/sp_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -54,14 +54,14 @@
 
                     />
 
-                <com.example.graduate_android.component.CustomImageButton
-                    android:id="@+id/customButtonC"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    app:hintText="社区"
-                    app:imageButtonResource="@drawable/home_community" />
+<!--                <com.example.graduate_android.component.CustomImageButton-->
+<!--                    android:id="@+id/customButtonC"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    app:hintText="社区"-->
+<!--                    app:imageButtonResource="@drawable/home_community" />-->
 
                 <com.example.graduate_android.component.CustomImageButton
                     android:id="@+id/customButtonD"

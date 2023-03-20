@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
 
     private CustomImageButton customA;
     private CustomImageButton customB;
-    private CustomImageButton customC;
+//    private CustomImageButton customC;
     private CustomImageButton customD;
     private LineChart lineChart;
     private BottomNavigationView bottomNavigation;
@@ -47,7 +47,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         //顶部的4个自定义ImageView+TextView组成的按钮
         customA = findViewById(R.id.customButtonA);
         customB = findViewById(R.id.customButtonB);
-        customC = findViewById(R.id.customButtonC);
+//        customC = findViewById(R.id.customButtonC);
         customD = findViewById(R.id.customButtonD);
         add = findViewById(R.id.add);
         customBarA = findViewById(R.id.customBarA);
@@ -148,14 +148,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
             }
         });
 
-        customC.setOnClickListeners(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, SendOtpActivity.class);
-                startActivity(intent);
-
-            }
-        });
+//        customC.setOnClickListeners(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(HomeActivity.this, SendOtpActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
         customD.setOnClickListeners(new View.OnClickListener() {
             @Override
