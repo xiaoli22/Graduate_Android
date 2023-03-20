@@ -7,16 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduate_android.adpater.BudgetAdapter;
 import com.example.graduate_android.bean.Budget;
 import com.example.graduate_android.component.CustomReturn;
+import com.example.graduate_android.utils.BaseActivity;
 
 import java.util.List;
 import java.util.Map;
 
-public class BudgetTwoActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class BudgetTwoActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
 
     private Map<String, List<Budget>> budgetLists;
@@ -53,7 +55,6 @@ public class BudgetTwoActivity extends AppCompatActivity implements AdapterView.
 //            System.out.println("==================================" + str + "===================================");
         }
 
-
         //BudgetAdapter测试,确定绑定布局，获取初始化数据，使用setAdapter实现数据和视图的绑定
         //获取数据集，根据传递来的值决定显示的数据
         budgetLists = Budget.getDefaultLists();
@@ -68,6 +69,9 @@ public class BudgetTwoActivity extends AppCompatActivity implements AdapterView.
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(this, "点击了是二级预算" + budgetList.get(position).getType(), Toast.LENGTH_SHORT).show();
+        //从ListView的子布局custom_budget_show中找出余额textView并且设置
+        TextView balance = view.findViewById(R.id.balanceBS);
+        onClickButton(balance);
     }
 
     @Override

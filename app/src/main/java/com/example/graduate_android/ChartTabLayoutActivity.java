@@ -56,15 +56,16 @@ public class ChartTabLayoutActivity extends FragmentActivity {
                         tab.setText("基础统计");
                         break;
                     }
+//                    case 1: {
+//                        tab.setText("账户");
+//                        break;
+//                    }
+
                     case 1: {
-                        tab.setText("账户");
-                        break;
-                    }
-                    case 2: {
                         tab.setText("成员");
                         break;
                     }
-                    case 3: {
+                    case 2: {
                         tab.setText("项目");
                         break;
                     }

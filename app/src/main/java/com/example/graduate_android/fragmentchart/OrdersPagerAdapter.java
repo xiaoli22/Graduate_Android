@@ -31,11 +31,11 @@ public class OrdersPagerAdapter extends FragmentStateAdapter {
         switch (position){
             case 0:
                 return new BaseFragment();
+//            case 1:
+//                return new AccountFragment();
             case 1:
-                return new AccountFragment();
-            case 2:
                 return new MenbersFragment();
-            case 3:
+            case 2:
                 return new ProjectFragment();
         }
         return null;
@@ -43,6 +43,6 @@ public class OrdersPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3;
     }
 }

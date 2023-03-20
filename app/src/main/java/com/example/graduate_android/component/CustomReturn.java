@@ -47,4 +47,12 @@ public class CustomReturn extends LinearLayout {
         titleR.setOnClickListener(listener);
         returnR.setOnClickListener(listener);
     }
+
+    public String getTitleR() {
+        return titleR.getText().toString();
+    }
+
+    public void setTitleR(String titleR) {
+        this.titleR.setText(titleR);
+    }
 }

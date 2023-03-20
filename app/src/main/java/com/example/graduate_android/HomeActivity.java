@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
 
     private CustomImageButton customA;
     private CustomImageButton customB;
-//    private CustomImageButton customC;
+    //    private CustomImageButton customC;
     private CustomImageButton customD;
     private LineChart lineChart;
     private BottomNavigationView bottomNavigation;
@@ -38,10 +38,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
     private CustomMessageBar customBarA;
     private CustomMessageBar customBarB;
     private CustomMessageBar customBarC;
+    private Intent intent = new Intent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         setContentView(R.layout.activity_home);
 
         //顶部的4个自定义ImageView+TextView组成的按钮
@@ -56,73 +58,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
 
         customBarA.setDateMB(DateTimeUtils.getDateOfCurrentWeek());
         customBarB.setDateMB(DateTimeUtils.getMonthFirstAndLastDay());
-        customBarC.setDateMB(DateTimeUtils.getCurrentYear()+"年");
+        customBarC.setDateMB(DateTimeUtils.getCurrentYear() + "年");
 
-
-//        //调表库组件
-//        lineChart = findViewById(R.id.lineChart);
-
-        //信息展示组件CustomMessageBar
-
-
-
-        customBarA.setOnClickListeners(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, SendOtpActivity.class);
-                customBarA.setBackground(RippleUtils.createRippleDrawable(HomeActivity.this, R.color.ripple_color, R.drawable.my_select));
-                startActivity(intent);
-            }
-        });
 
 
         bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setOnItemSelectedListener(this);
 
-//        ArrayList<Entry> dataList1 = new ArrayList<>();
-//        ArrayList<Entry> dataList2 = new ArrayList<>();
-//        Entry entry1 = new Entry(100, 200);
-//        Entry entry2 = new Entry(200, 300);
-//        Entry entry3 = new Entry(300, 800);
-//        Entry entry4 = new Entry(400, 200);
-//        Entry entry5 = new Entry(500, 600);
-//        dataList1.add(entry1);
-//        dataList1.add(entry2);
-//        dataList1.add(entry3);
-//        dataList1.add(entry4);
-//        dataList1.add(entry5);
-//
-//
-//        Entry entry10 = new Entry(100, 0);
-//        Entry entry6 = new Entry(200, 50);
-//        Entry entry7 = new Entry(300, 150);
-//        Entry entry8 = new Entry(400, 200);
-//        Entry entry9 = new Entry(500, 600);
-//        dataList2.add(entry10);
-//        dataList2.add(entry6);
-//        dataList2.add(entry7);
-//        dataList2.add(entry8);
-//        dataList2.add(entry9);
-//
-//        LineDataSet dataSet1 = new LineDataSet(dataList1, "Label");
-//        LineDataSet dataSet2 = new LineDataSet(dataList2, "Label");
-//
-//        dataSet1.setColor(Color.BLUE);
-//        dataSet1.setLineWidth(3f);
-//        dataSet1.setCircleColor(Color.RED);
-//
-//        dataSet2.setColor(Color.GREEN);
-//        dataSet2.setLineWidth(2f);
-//        dataSet2.setCircleColor(Color.RED);
-//
-//
-//        // 将数据集添加到 LineChart
-//        List<ILineDataSet> dataSets = new ArrayList<>();
-//        dataSets.add(dataSet1);
-//        dataSets.add(dataSet2);
-//        LineData lineData = new LineData(dataSets);
-//        lineChart.setData(lineData);
-//        lineChart.invalidate();
 
 
         /*

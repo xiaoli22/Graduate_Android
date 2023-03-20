@@ -29,7 +29,9 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         cardC.setOnClickListener(this);
         cardD.setOnClickListener(this);
         cardE.setOnClickListener(this);
-//获得今天的日期
+
+
+
         returnA.setOnClickListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +44,9 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        startActivity(new Intent(AccountActivity.this, WaterDetailsActivity.class));
-
+        Intent intent = new Intent(AccountActivity.this, WaterDetailsActivity.class);
+        intent.putExtra("title", ((CustomDisplayCard) v).getSourceDC());
+        intent.putExtra("class", "AccountActivity");
+        startActivity(intent);
     }
 }

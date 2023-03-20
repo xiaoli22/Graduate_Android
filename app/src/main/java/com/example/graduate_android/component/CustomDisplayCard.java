@@ -20,6 +20,11 @@ public class CustomDisplayCard extends LinearLayout {
     private final String sourceD;
     private final String moneyD;
     private final int imageD;
+    private TextView accountDC;
+    private TextView assetDC;
+    private TextView sourceDC;
+    private TextView moneyDC;
+    private ImageView imageDC;
 
     public CustomDisplayCard(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -36,28 +41,36 @@ public class CustomDisplayCard extends LinearLayout {
 
     private void init() {
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        inflater.inflate(R.layout.custom_display_card,this);
+        inflater.inflate(R.layout.custom_display_card, this);
 
-        TextView accountDC = findViewById(R.id.accountDC);
-        TextView assetDC = findViewById(R.id.assetDC);
-        TextView sourceDC = findViewById(R.id.sourceDC);
-        TextView moneyDC = findViewById(R.id.moneyDC);
-        ImageView imageDC = findViewById(R.id.imageDC);
-        if (accountD!=null){
+        accountDC = findViewById(R.id.accountDC);
+        assetDC = findViewById(R.id.assetDC);
+        sourceDC = findViewById(R.id.sourceDC);
+        moneyDC = findViewById(R.id.moneyDC);
+        imageDC = findViewById(R.id.imageDC);
+        if (accountD != null) {
             accountDC.setText(accountD);
         }
-        if (assetD!=null){
+        if (assetD != null) {
             assetDC.setText(assetD);
         }
-        if (sourceD!=null){
+        if (sourceD != null) {
             sourceDC.setText(sourceD);
         }
-        if (moneyD!=null){
+        if (moneyD != null) {
             moneyDC.setText(moneyD);
         }
-        if (imageD!=0){
+        if (imageD != 0) {
             imageDC.setImageResource(imageD);
         }
 
+    }
+
+    public String getSourceDC() {
+        return sourceDC.getText().toString();
+    }
+
+    public void setSourceDC(TextView sourceDC) {
+        this.sourceDC = sourceDC;
     }
 }

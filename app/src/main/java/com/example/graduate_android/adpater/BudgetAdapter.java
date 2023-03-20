@@ -45,9 +45,6 @@ public class BudgetAdapter extends ArrayAdapter<Budget> {
         Budget budget = budgetList.get(position);
         imageView.setImageResource(budget.getImageResId());
         titleTextView.setText(budget.getType());
-//        progressBar.setProgress((int) (budget.getBalance() / budget.getBudget() * 100));
-//        budgetTextView.setText(String.format(Locale.getDefault(), "支出预算 %.2f", budget.getBudget()));
-//        balanceTextView.setText(String.format(Locale.getDefault(), "余额: %.2f", budget.getBalance()));
 
         return view;
     }

@@ -26,7 +26,7 @@ public class Budget {
     };
 
     private static final String[] TypeArray = {
-            "one", "two", "three", "four", "five", "six"
+            "货物材料", "人工支出", "运营费用", "固定资产", "财务费用", "其他杂项"
     };
 
 
@@ -36,24 +36,22 @@ public class Budget {
 
             {R.drawable.budget_enterprises, R.drawable.budget_finance, R.drawable.budget_goods,
                     R.drawable.budget_operation, R.drawable.budget_shareholder, R.drawable.budget_finance,
-                    R.drawable.budget_enterprises, R.drawable.budget_finance, R.drawable.budget_goods,
-                    R.drawable.budget_operation, R.drawable.budget_shareholder, R.drawable.budget_finance},
+                    R.drawable.budget_enterprises,},
 
             {R.drawable.budget_operation, R.drawable.budget_shareholder, R.drawable.budget_finance},
             {R.drawable.budget_enterprises, R.drawable.budget_finance, R.drawable.budget_goods},
-            {R.drawable.budget_enterprises, R.drawable.budget_finance,},
-            {R.drawable.budget_enterprises, R.drawable.budget_finance, R.drawable.budget_goods,}
+            {R.drawable.budget_enterprises, R.drawable.budget_finance, R.drawable.budget_goods},
+
     };
 
 
     private static final String[][] typeArrays = {
-            {"one", "two"},
-            {"one", "two", "three", "four",},
-            {"one", "two", "three", "four", "five", "six", "one", "two", "three", "four", "five", "six"},
-            {"one", "two", "three"},
-            {"one", "two", "three"},
-            {"one", "two",},
-            {"one", "two", "three"},
+            {"进货支出", "包装耗材"},
+            {"员工工资", "员工提成", "员工福利", "员工社会",},
+            {"房租", "水电", "物业管理费", "办公用品", "招待费", "油费", "运营杂费"},
+            {"办公设备", "房产", "公用车辆"},
+            {"做账报税", "税费", "发票"},
+            {"烂账损失", "赔偿罚款", "其他支出"},
     };
 
     public static List<Budget> getDefaultList() {

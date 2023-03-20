@@ -1,14 +1,9 @@
 package com.example.graduate_android;
 
-import static java.security.AccessController.getContext;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -40,7 +35,7 @@ public class BudgetActivity extends AppCompatActivity implements AdapterView.OnI
         setContentView(R.layout.activity_budget);
 
         returnB = findViewById(R.id.returnB);
-        listViewB = findViewById(R.id.listViewB);
+        listViewB = findViewById(R.id.listViewBu);
         messageShowB = findViewById(R.id.messageShowB);
 
 
@@ -66,7 +61,6 @@ public class BudgetActivity extends AppCompatActivity implements AdapterView.OnI
         intent = new Intent(BudgetActivity.this, BudgetTwoActivity.class);
         intent.putExtra("position", position + 1);
         startActivity(intent);
-
     }
 
 }
