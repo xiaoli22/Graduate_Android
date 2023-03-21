@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragmentadd.BalanceFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,29 +14,15 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
 
-    <com.example.graduate_android.component.CustomAddNormal
-        android:id="@+id/addnormalBA"
+    <ListView
+        android:id="@+id/listViewBalance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/inputBalance"
-        app:types="account"
-        />
-
-
-
-    <com.example.graduate_android.component.CustomAddRemark
-        android:id="@+id/editBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/addnormalBA" />
-
-    <TextView
-        android:layout_below="@+id/editBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="balance Information"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        android:layout_below="@id/inputBalance"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:divider="#F2F0F0"
+        android:dividerHeight="1dp" />
 
 </RelativeLayout>

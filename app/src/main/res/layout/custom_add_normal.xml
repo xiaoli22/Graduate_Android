@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="60dp"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="20dp"
     android:layout_marginRight="20dp"
+    android:gravity="center_vertical"
     android:orientation="horizontal">
 
 
@@ -18,33 +19,25 @@
 
     <TextView
         android:id="@+id/typeAN"
+        style="@style/CustomTypeStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/imageAN"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="3dp"
         android:layout_toRightOf="@+id/imageAN"
-        android:text="类型"
-        style="@style/CustomTypeStyle"
-        />
+        android:text="类型" />
 
     <TextView
         android:id="@+id/dataAN"
+        style="@style/CustomDataStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="2dp"
-        android:layout_toRightOf="@+id/typeAN"
         android:layout_alignTop="@id/imageAN"
-        android:text="相关数据"
-        style="@style/CustomDataStyle"
-        />
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/typeAN"
+        android:text="相关数据" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/dataAN"
-        android:layout_marginTop="15dp"
-        android:background="#EEEBEB"></View>
+
 
 </RelativeLayout>

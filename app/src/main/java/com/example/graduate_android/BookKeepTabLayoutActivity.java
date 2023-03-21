@@ -23,7 +23,6 @@ public class BookKeepTabLayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_keeping);
-
         tabLayoutBK = findViewById(R.id.tabLayoutBK);
         viewPager2Bk = findViewById(R.id.viewPagerBK);
         returnBK = findViewById(R.id.returnBK);
@@ -32,7 +31,7 @@ public class BookKeepTabLayoutActivity extends AppCompatActivity {
         returnBK.setOnClickListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookKeepTabLayoutActivity.this,HomeActivity.class);
+                Intent intent = new Intent(BookKeepTabLayoutActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -61,10 +60,10 @@ public class BookKeepTabLayoutActivity extends AppCompatActivity {
                         tab.setText("余额");
                         break;
                     }
+//                    case 4:
+//                        tab.setText("借贷");
+//                        break;
                     case 4:
-                        tab.setText("借贷");
-                        break;
-                    case 5:
                         tab.setText("报销");
                         break;
                 }

@@ -41,24 +41,24 @@ public class CustomAddNormal extends LinearLayout {
         typeAN = findViewById(R.id.typeAN);
         dataAN = findViewById(R.id.dataAN);
 
-        switch (type){
-            case "account":
-                imageAN.setImageResource(R.drawable.book_account);
-                typeAN.setText("账户");
-                break;
-            case "time":
-                imageAN.setImageResource(R.drawable.book_time);
-                typeAN.setText("时间");
-                break;
-            case "member":
-                imageAN.setImageResource(R.drawable.book_member);
-                typeAN.setText("成员");
-                break;
-            case "project":
-                imageAN.setImageResource(R.drawable.book_project);
-                typeAN.setText("项目");
-                break;
-        }
+//        switch (type){
+//            case "account":
+//                imageAN.setImageResource(R.drawable.book_account);
+//                typeAN.setText("账户");
+//                break;
+//            case "time":
+//                imageAN.setImageResource(R.drawable.book_time);
+//                typeAN.setText("时间");
+//                break;
+//            case "member":
+//                imageAN.setImageResource(R.drawable.book_member);
+//                typeAN.setText("成员");
+//                break;
+//            case "project":
+//                imageAN.setImageResource(R.drawable.book_project);
+//                typeAN.setText("项目");
+//                break;
+//        }
 
 
         if (dataA != null) {

@@ -24,9 +24,9 @@ public class OrdersPagerAdapter2 extends FragmentStateAdapter {
                     return new TransferFragment();
                 case 3:
                     return new BalanceFragment();
+//                case 4:
+//                    return new LoanFragment();
                 case 4:
-                    return new LoanFragment();
-                case 5:
                     return new ReimbursementFragment();
             }
             return null;
@@ -36,6 +36,6 @@ public class OrdersPagerAdapter2 extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 6;
+        return 5;
     }
 }

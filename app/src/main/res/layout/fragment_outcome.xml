@@ -17,41 +17,16 @@
         android:layout_marginRight="10dp"
         app:textColor="#0DB314" />
 
-
-    <com.example.graduate_android.component.CustomAddNormal
-        android:id="@+id/addnormalA"
+    <ListView
+        android:id="@+id/listViewOutcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/inputOutcome"
-        app:types="account"
-        />
-
-    <com.example.graduate_android.component.CustomAddNormal
-        android:id="@+id/addnormalB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/addnormalA"
-        app:types="time" />
-
-    <com.example.graduate_android.component.CustomAddNormal
-        android:id="@+id/addnormalC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/addnormalB"
-        app:types="member" />
-
-    <com.example.graduate_android.component.CustomAddNormal
-        android:id="@+id/addnormalD"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/addnormalC"
-        app:types="project" />
-
-    <com.example.graduate_android.component.CustomAddRemark
-        android:id="@+id/editOutcome"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@id/addnormalD" />
+        android:layout_below="@id/inputOutcome"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:dividerHeight="1dp"
+        android:divider="#F2F0F0"
+        android:layout_marginRight="10dp" />
 
 
 </RelativeLayout>

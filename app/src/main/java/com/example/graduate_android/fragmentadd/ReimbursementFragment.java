@@ -1,5 +1,7 @@
 package com.example.graduate_android.fragmentadd;
 
+import static com.example.graduate_android.bean.AddNormal.getDefaultAN;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,15 +9,22 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.example.graduate_android.R;
+import com.example.graduate_android.adpater.AddAdapter;
+import com.example.graduate_android.bean.AddNormal;
+import com.example.graduate_android.databinding.FragmentReimbursementBinding;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ReimbursementFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ReimbursementFragment extends Fragment {
+public class ReimbursementFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +70,16 @@ public class ReimbursementFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reimbursement, container, false);
+        FragmentReimbursementBinding binding = FragmentReimbursementBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        ArrayList<AddNormal> list = getDefaultAN();
+        binding.listViewReimBurse.setAdapter(new AddAdapter(getContext(), list));
+        binding.listViewReimBurse.setOnItemClickListener(this);
+        return view;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(getActivity(), "You click addReimburse", Toast.LENGTH_SHORT).show();
     }
 }

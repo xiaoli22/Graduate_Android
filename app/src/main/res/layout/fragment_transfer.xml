@@ -12,35 +12,15 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
-    
-    <com.example.graduate_android.component.CustomAddNormal
-        android:id="@+id/addnormalTB"
+
+    <ListView
+        android:id="@+id/listViewTransfer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/inputTransfer"
-        app:types="time" />
-
-    <com.example.graduate_android.component.CustomAddNormal
-        android:id="@+id/addnormalTC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/addnormalTB"
-        app:types="member" />
-
-    <com.example.graduate_android.component.CustomAddRemark
-        android:id="@+id/editTransfer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/addnormalTC" />
-    
-
-    <TextView
-        android:layout_below="@+id/editTransfer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Transfer Information"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        />
+        android:layout_below="@id/inputTransfer"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:dividerHeight="1dp"
+        android:divider="#F2F0F0"
+        android:layout_marginRight="10dp" />
 </RelativeLayout>
