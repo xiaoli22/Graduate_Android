@@ -80,10 +80,20 @@ public class ReimbursementFragment extends Fragment implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(getActivity(), "You click addReimburse", Toast.LENGTH_SHORT).show();
-        if (position == 1) {
-            OutcomeFragment outcomeFragment = new OutcomeFragment();
-            outcomeFragment.showDatePickerDialog(getContext(), view);
+//        Toast.makeText(getActivity(), "You click addReimburse", Toast.LENGTH_SHORT).show();
+        OutcomeFragment outcomeFragment = new OutcomeFragment();
+        switch (position) {
+            case 0:
+                outcomeFragment.showAccountDialog(getContext(), view);
+                break;
+            case 1:
+                outcomeFragment.showDatePickerDialog(getContext(), view);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
         }
+
     }
 }

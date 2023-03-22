@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,12 +20,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     FirebaseAuth firebaseAuth;
     String email, password;
     private com.example.graduate_android.databinding.ActivityLoginBinding binding;
+    Intent intent = new Intent();
+    ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,57 +37,75 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.buttonRegister.setOnClickListener(this);
+        binding.buttonReset.setOnClickListener(this::onClick);
+
+//        progressDialog = new ProgressDialog(this);
+
         firebaseAuth = FirebaseAuth.getInstance();
-
         binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                email = binding.email.getText().toString();
-                password = binding.password.getText().toString();
-                Log.d("TAG1", "onClick: " + email + " " + password);
-                Log.d("TAG1", "onClick: " + email + " " + password);
-                FirebaseAuth.getInstance().
-                        signInWithEmailAndPassword(email, password).
-                        addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                            @Override
-                            public void onSuccess(AuthResult authResult) {
-                                FirebaseUser user = firebaseAuth.getCurrentUser();
-                                if (user.isEmailVerified()) {
-                                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                    startActivity(intent);
-                                    Log.d("TAG2", "完成了验证，实现登录");
-                                } else {
-                                    user.sendEmailVerification().
-                                            addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(LoginActivity.this, "Verification Email has been sent", Toast.LENGTH_LONG).show();
-                                                    Log.d("TAG3", "onSuccess: Email sent");
-                                                }
-                                            }).addOnFailureListener(new OnFailureListener() {
-                                                @Override
-                                                public void onFailure(@NonNull Exception e) {
-                                                    Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                                                    Log.d("TAG4", "onFailure: Email not sent " + e.getMessage());
-                                                }
-                                            });
-                                }
-                            }
-                        });
+                String email = binding.email.getText().toString();
+                String password = binding.password.getText().toString();
+//                progressDialog.show();
 
 
-//                if (email.isEmpty() || password.isEmpty()) {
-//                    Toast.makeText(LoginActivity.this, "Please enter all the details", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    loginUser();
-//                }
+                if (!email.isEmpty() && !password.isEmpty()) {
+                    firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, task -> {
+                        if (task.isSuccessful()) {
+//                            progressDialog.cancel();
+                            intent.setClass(LoginActivity.this, HomeActivity.class);
+                            startActivity(intent);
+                        } else {
+//                            progressDialog.cancel();
+                            Toast.makeText(LoginActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else {
+                    Toast.makeText(LoginActivity.this, "Empty error", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+//        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+//        if (currentUser != null) {
+//            intent.setClass(LoginActivity.this, HomeActivity.class);
+//            startActivity(intent);
+//        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.buttonRegister:
+                intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonReset:
+                progressDialog.setTitle("Sending Mail");
+                String email = binding.email.getText().toString();
+                firebaseAuth.sendPasswordResetEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(LoginActivity.this, "Reset email sent", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(LoginActivity.this, "Error! Reset email is not sent" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+                break;
+        }
+    }
 }
+
 
 
 

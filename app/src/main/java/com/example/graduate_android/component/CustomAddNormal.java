@@ -62,7 +62,10 @@ public class CustomAddNormal extends LinearLayout {
         this.typeAN = typeAN;
     }
 
-    public void setDataAN(TextView dataAN) {
-        this.dataAN = dataAN;
+    public void setDataAN(String data) {
+        this.dataAN.setText(data);
     }
+
+
+
 }

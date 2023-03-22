@@ -86,6 +86,15 @@ public class BalanceFragment extends Fragment implements AdapterView.OnItemClick
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(getActivity(), "You click addBalance" + position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "You click addBalance" + position, Toast.LENGTH_SHORT).show();
+        OutcomeFragment outcomeFragment = new OutcomeFragment();
+        switch (position) {
+            case 0:
+                outcomeFragment.showAccountDialog(getContext(), view);
+                break;
+            case 1:
+                break;
+
+        }
     }
 }

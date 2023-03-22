@@ -53,11 +53,11 @@ public class AddNormal {
 
     static int[] imageArray = {R.drawable.book_account, R.drawable.book_time, R.drawable.book_member, R.drawable.book_project, R.drawable.book_note};
     static String[] typeArray = {"账户", "时间", "成员", "项目", "备注"};
-    static String[] dataArray = {"相关数据", date, "相关数据", "相关数据", "..."};
+    static String[] dataArray = {"现金账户", date, "相关数据", "相关数据", "..."};
 
     static int[] imageArray1 = {R.drawable.book_account, R.drawable.book_note};
     static String[] typeArray1 = {"账户", "备注"};
-    static String[] dataArray1 = {"相关数据", "..."};
+    static String[] dataArray1 = {"现金账户", "..."};
 
 
     public static ArrayList<AddNormal> getDefaultAN() {
