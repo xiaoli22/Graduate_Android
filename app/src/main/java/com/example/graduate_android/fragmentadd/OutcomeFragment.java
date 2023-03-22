@@ -1,7 +1,14 @@
 package com.example.graduate_android.fragmentadd;
 
 import static com.example.graduate_android.bean.AddNormal.getDefaultAN;
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentDay;
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentMonth;
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentYear;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.assist.AssistStructure;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,13 +18,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.graduate_android.R;
 import com.example.graduate_android.adpater.AddAdapter;
 import com.example.graduate_android.bean.AddNormal;
+import com.example.graduate_android.databinding.CustomAddNormalBinding;
 import com.example.graduate_android.databinding.FragmentOutcomeBinding;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,6 +48,7 @@ public class OutcomeFragment extends Fragment implements AdapterView.OnItemClick
     private String mParam1;
     private String mParam2;
     FragmentOutcomeBinding binding;
+    private com.example.graduate_android.databinding.CustomAddNormalBinding binding1;
 
     public OutcomeFragment() {
         // Required empty public constructor
@@ -72,6 +86,9 @@ public class OutcomeFragment extends Fragment implements AdapterView.OnItemClick
 
         binding = FragmentOutcomeBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
+
+        binding1 = CustomAddNormalBinding.inflate(inflater, container, false);
+
         //获得初始数据
         ArrayList<AddNormal> addNormals = getDefaultAN();
         //创建适配器
@@ -91,7 +108,28 @@ public class OutcomeFragment extends Fragment implements AdapterView.OnItemClick
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(getActivity(), "You click addOutcome", Toast.LENGTH_SHORT).show();
-        
+        Toast.makeText(getActivity(), "You click addOutcome" + position, Toast.LENGTH_SHORT).show();
+
+        if (position == 1) {
+            showDatePickerDialog(getContext(), view);
+        }
+
     }
+
+
+    //提供给其他Fragment使用
+    public void showDatePickerDialog(Context context, View view) {
+        DateDialog(context, view);
+    }
+
+    private void DateDialog(Context context, View view) {
+        DatePickerDialog dialog = new DatePickerDialog(context, (DatePicker, year, month, dayOfMonth) -> {
+            String date = String.format(Locale.CHINA, "%d-%d-%d", year, month + 1, dayOfMonth);
+            TextView textView = view.findViewById(R.id.dataAN);
+            textView.setText(date);
+        }, getCurrentYear(), getCurrentMonth(), getCurrentDay());
+        dialog.show();
+    }
+
+
 }

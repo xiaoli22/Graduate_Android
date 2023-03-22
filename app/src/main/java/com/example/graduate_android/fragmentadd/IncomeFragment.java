@@ -97,5 +97,9 @@ public class IncomeFragment extends Fragment implements AdapterView.OnItemClickL
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //获取点击的item
         Toast.makeText(getActivity(), "You click addIncome", Toast.LENGTH_SHORT).show();
+        if (position == 1) {
+            OutcomeFragment outcomeFragment = new OutcomeFragment();
+            outcomeFragment.showDatePickerDialog(getContext(),view);
+        }
     }
 }

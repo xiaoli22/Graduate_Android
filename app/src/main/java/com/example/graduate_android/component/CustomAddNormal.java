@@ -1,5 +1,8 @@
 package com.example.graduate_android.component;
 
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentMonth;
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentYear;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -11,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.example.graduate_android.R;
+
+import java.util.Locale;
 
 public class CustomAddNormal extends LinearLayout {
 
@@ -40,25 +45,6 @@ public class CustomAddNormal extends LinearLayout {
         imageAN = findViewById(R.id.imageAN);
         typeAN = findViewById(R.id.typeAN);
         dataAN = findViewById(R.id.dataAN);
-
-//        switch (type){
-//            case "account":
-//                imageAN.setImageResource(R.drawable.book_account);
-//                typeAN.setText("账户");
-//                break;
-//            case "time":
-//                imageAN.setImageResource(R.drawable.book_time);
-//                typeAN.setText("时间");
-//                break;
-//            case "member":
-//                imageAN.setImageResource(R.drawable.book_member);
-//                typeAN.setText("成员");
-//                break;
-//            case "project":
-//                imageAN.setImageResource(R.drawable.book_project);
-//                typeAN.setText("项目");
-//                break;
-//        }
 
 
         if (dataA != null) {

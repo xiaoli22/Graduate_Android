@@ -1,14 +1,20 @@
 package com.example.graduate_android.bean;
 
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentDay;
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentMonth;
+import static com.example.graduate_android.utils.DateTimeUtils.getCurrentYear;
+
 import com.example.graduate_android.R;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class AddNormal {
 
     private int image;
     private String type;
     private String data;
+    static String date = String.format(Locale.CHINA, "%d-%d-%d", getCurrentYear(), getCurrentMonth(), getCurrentDay());
 
     public AddNormal(int image, String type, String data) {
         this.image = image;
@@ -47,13 +53,11 @@ public class AddNormal {
 
     static int[] imageArray = {R.drawable.book_account, R.drawable.book_time, R.drawable.book_member, R.drawable.book_project, R.drawable.book_note};
     static String[] typeArray = {"账户", "时间", "成员", "项目", "备注"};
-    static String[] dataArray = {"相关数据", "相关数据", "相关数据", "相关数据", "..."};
+    static String[] dataArray = {"相关数据", date, "相关数据", "相关数据", "..."};
 
     static int[] imageArray1 = {R.drawable.book_account, R.drawable.book_note};
     static String[] typeArray1 = {"账户", "备注"};
     static String[] dataArray1 = {"相关数据", "..."};
-
-
 
 
     public static ArrayList<AddNormal> getDefaultAN() {

@@ -84,5 +84,9 @@ public class TransferFragment extends Fragment implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(getActivity(), "You click addTransfer", Toast.LENGTH_SHORT).show();
+        if (position == 1) {
+            OutcomeFragment outcomeFragment = new OutcomeFragment();
+            outcomeFragment.showDatePickerDialog(getContext(),view);
+        }
     }
 }
