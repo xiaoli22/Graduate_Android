@@ -3,7 +3,7 @@ package com.example.graduate_android;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
+//import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,7 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseAuth firebaseAuth;
-    //    FirebaseFirestore firebaseFirestore;
+    FirebaseFirestore firebaseFirestore;
     private Intent intent = new Intent();
 
 //    ProgressDialog progressDialog;
@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         binding.buttonLogin.setOnClickListener(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
-//        firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
 //        progressDialog = new ProgressDialog(this);
         binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
 
@@ -63,9 +63,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 startActivity(intent);
 
 //                                progressDialog.cancel();
-//                                firebaseFirestore.collection("User")
-//                                        .document(FirebaseAuth.getInstance().getUid())
-//                                        .set(new UserModel(email, password));
+                                firebaseFirestore.collection("User")
+                                        .document(FirebaseAuth.getInstance().getUid())
+                                        .set(new UserModel(email, password));
                             } else {
                                 Toast.makeText(RegisterActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
 //                                progressDialog.cancel();

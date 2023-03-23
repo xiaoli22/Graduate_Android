@@ -61,7 +61,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
         customBarC.setDateMB(DateTimeUtils.getCurrentYear() + "年");
 
 
-
         bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setOnItemSelectedListener(this);
 
@@ -133,12 +132,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
                 intent.setClass(this, ChartTabLayoutActivity.class);
                 startActivity(intent);
                 break;
-
             case R.id.person:
-
                 break;
             case R.id.setting:
-
+                startActivity(intent.setClass(this, SettingActivity.class));
                 break;
         }
         return false;
