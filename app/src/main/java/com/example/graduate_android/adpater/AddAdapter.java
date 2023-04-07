@@ -44,15 +44,6 @@ public class AddAdapter extends ArrayAdapter<AddNormal> {
         binding.imageAN.setImageResource(list.get(position).getImage());
         binding.typeAN.setText(list.get(position).getType());
         binding.dataAN.setText(list.get(position).getData());
-//        ImageView image = view.findViewById(R.id.imageAN);
-//        TextView textView = view.findViewById(R.id.typeAN);
-//        TextView textView1 = view.findViewById(R.id.dataAN);
-//
-//
-//        image.setImageResource(list.get(position).getImage());
-//        textView.setText(list.get(position).getType());
-//        textView1.setText(list.get(position).getData());
-
         return view;
     }
 }

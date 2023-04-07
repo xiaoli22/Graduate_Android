@@ -30,7 +30,6 @@ public class OrdersPagerAdapter2 extends FragmentStateAdapter {
                     return new ReimbursementFragment();
             }
             return null;
-
     }
 
 

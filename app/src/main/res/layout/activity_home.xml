@@ -54,14 +54,14 @@
 
                     />
 
-<!--                <com.example.graduate_android.component.CustomImageButton-->
-<!--                    android:id="@+id/customButtonC"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:gravity="center"-->
-<!--                    app:hintText="社区"-->
-<!--                    app:imageButtonResource="@drawable/home_community" />-->
+                <com.example.graduate_android.component.CustomImageButton
+                    android:id="@+id/customButtonC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:hintText="审核"
+                    app:imageButtonResource="@drawable/ic_audit" />
 
                 <com.example.graduate_android.component.CustomImageButton
                     android:id="@+id/customButtonD"
@@ -75,13 +75,11 @@
             </LinearLayout>
 
             <com.example.graduate_android.component.CustomMessageShow
-                android:layout_marginTop="13dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
-            </com.example.graduate_android.component.CustomMessageShow>
-
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"></com.example.graduate_android.component.CustomMessageShow>
 
 
             <LinearLayout
@@ -115,45 +113,45 @@
             </LinearLayout>
 
 
-<!--            <com.github.mikephil.charting.charts.LineChart-->
-<!--                android:id="@+id/lineChart"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="180dp"/>-->
+            <!--            <com.github.mikephil.charting.charts.LineChart-->
+            <!--                android:id="@+id/lineChart"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="180dp"/>-->
 
 
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:text="You will quickly finish this"-->
-<!--                android:textSize="30dp" />-->
-<!--            <TextView-->
-<!--                android:gravity="center"-->
-<!--                android:text="You will quickly finish this"-->
-<!--                android:textSize="30dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <TextView-->
-<!--                android:gravity="center"-->
-<!--                android:text="You will quickly finish this"-->
-<!--                android:textSize="50dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <TextView-->
-<!--                android:gravity="center"-->
-<!--                android:text="You will quickly finish this"-->
-<!--                android:textSize="30dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <TextView-->
-<!--                android:gravity="center"-->
-<!--                android:text="You will quickly finish this"-->
-<!--                android:textSize="30dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="65dp"/>-->
+            <!--            <TextView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="You will quickly finish this"-->
+            <!--                android:textSize="30dp" />-->
+            <!--            <TextView-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="You will quickly finish this"-->
+            <!--                android:textSize="30dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"/>-->
+            <!--            <TextView-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="You will quickly finish this"-->
+            <!--                android:textSize="50dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"/>-->
+            <!--            <TextView-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="You will quickly finish this"-->
+            <!--                android:textSize="30dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"/>-->
+            <!--            <TextView-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="You will quickly finish this"-->
+            <!--                android:textSize="30dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"/>-->
+            <!--            <TextView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="65dp"/>-->
         </LinearLayout>
 
 

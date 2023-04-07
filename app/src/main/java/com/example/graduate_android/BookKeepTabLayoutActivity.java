@@ -60,12 +60,12 @@ public class BookKeepTabLayoutActivity extends AppCompatActivity {
                         tab.setText("余额");
                         break;
                     }
-//                    case 4:
-//                        tab.setText("借贷");
-//                        break;
                     case 4:
                         tab.setText("报销");
                         break;
+//                    case 5:
+//                        tab.setText("审核");
+//                        break;
                 }
             }
         });

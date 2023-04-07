@@ -11,8 +11,9 @@
         android:layout_width="48dp"
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background" />
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        />
 
     <TextView
         android:id="@+id/accountName"
@@ -39,7 +40,7 @@
         android:layout_height="15dp"
         android:layout_alignTop="@+id/creater"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="4dp"
         android:layout_toRightOf="@+id/creater"
         android:background="@color/grey" />
 
@@ -53,15 +54,15 @@
         android:text="1人"
         android:textSize="16dp" />
 
-    <ImageButton
-        android:id="@+id/settingAB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/verticalLine"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="186dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginBottom="28dp"
-        android:layout_toEndOf="@+id/accountName" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/settingAB"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignBottom="@+id/verticalLine"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginStart="186dp"-->
+<!--        android:layout_marginRight="18dp"-->
+<!--        android:layout_marginBottom="28dp"-->
+<!--        android:layout_toEndOf="@+id/accountName" />-->
 
 </RelativeLayout>

@@ -2,6 +2,7 @@ package com.example.graduate_android.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class DateTimeUtils {
     public static int getCurrentYear() {
@@ -17,6 +18,56 @@ public class DateTimeUtils {
     public static int getCurrentDay() {
         Calendar calendar = Calendar.getInstance();
         return calendar.get(Calendar.DAY_OF_MONTH);
+    }
+
+    /**
+     * 获取当前小时数（0~23）
+     *
+     * @return 当前小时数
+     */
+    public static int getCurrentHour() {
+        // 获取当前时间的Calendar对象
+        Calendar calendar = Calendar.getInstance();
+        // 获取当前小时数，并返回
+        return calendar.get(Calendar.HOUR_OF_DAY);
+    }
+
+    /**
+     * 获取当前分钟数
+     *
+     * @return 当前分钟数
+     */
+    public static int getCurrentMinute() {
+        // 获取当前时间的Calendar对象
+        Calendar calendar = Calendar.getInstance();
+        // 获取当前分钟数，并返回
+        return calendar.get(Calendar.MINUTE);
+    }
+
+    /**
+     * 获取当前秒数
+     *
+     * @return 当前秒数
+     */
+    public static int getCurrentSecond() {
+        // 获取当前时间的Calendar对象
+        Calendar calendar = Calendar.getInstance();
+        // 获取当前秒数，并返回
+        return calendar.get(Calendar.SECOND);
+    }
+
+    /**
+     * 获取当前日期和时间的格式化字符串，格式为"yyyy年MM月dd日 HH:mm:ss"
+     *
+     * @return 当前日期和时间的格式化字符串
+     */
+    public static String getCurrentDateTime() {
+        // 获取当前时间的Calendar对象
+        Calendar calendar = Calendar.getInstance();
+        // 创建SimpleDateFormat对象，指定日期和时间的格式
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss", Locale.getDefault());
+        // 格式化当前时间，并返回格式化后的字符串
+        return dateFormat.format(calendar.getTime());
     }
 
 

@@ -2,16 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    >
+    android:gravity="center">
 
     <ImageButton
         android:id="@+id/image_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_centerInParent="true"
-        android:scaleType="fitXY"
         android:background="@android:color/transparent"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
@@ -21,6 +20,6 @@
         android:layout_below="@+id/image_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:text="提示文字" />
+        android:text="提示文字"
+        android:textStyle="bold" />
 </RelativeLayout>

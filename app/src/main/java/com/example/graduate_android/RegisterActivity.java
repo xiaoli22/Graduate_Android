@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Date;
+
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseAuth firebaseAuth;
@@ -34,15 +36,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         ActivityRegisterBinding binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.buttonRegister.setOnClickListener(this);
         binding.buttonLogin.setOnClickListener(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 //        progressDialog = new ProgressDialog(this);
         binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
-
-
             @Override
             public void onClick(View v) {
                 String email = binding.emailR.getText().toString();
@@ -65,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 //                                progressDialog.cancel();
                                 firebaseFirestore.collection("User")
                                         .document(FirebaseAuth.getInstance().getUid())
-                                        .set(new UserModel(email, password));
+                                        .set(new UserModel(email, password,new Date()));
                             } else {
                                 Toast.makeText(RegisterActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
 //                                progressDialog.cancel();

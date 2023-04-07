@@ -21,7 +21,7 @@
 
 
     <declare-styleable name="CustomInput">
-        <attr name="textColor" format="color"/>
+        <attr name="textColor" format="color" />
         <attr name="text" format="string" />
 
     </declare-styleable>
@@ -35,32 +35,39 @@
     </declare-styleable>
 
     <declare-styleable name="CustomDisplayCard">
-        <attr name="accountD" format="string"/>
-        <attr name="assetD" format="string"/>
-        <attr name="imageD" format="reference"/>
-        <attr name="sourceD" format="string"/>
-        <attr name="moneyD" format="string"/>
+        <attr name="accountD" format="string" />
+        <attr name="assetD" format="string" />
+        <attr name="imageD" format="reference" />
+        <attr name="sourceD" format="string" />
+        <attr name="moneyD" format="string" />
     </declare-styleable>
 
     <declare-styleable name="CustomAddNormal">
-        <attr name="imageN" format="reference"/>
-        <attr name="typeN" format="string"/>
-        <attr name="dataN" format="string"/>
-        <attr name="types" format="string"/>
+        <attr name="imageN" format="reference" />
+        <attr name="typeN" format="string" />
+        <attr name="dataN" format="string" />
+        <attr name="types" format="string" />
     </declare-styleable>
 
     <declare-styleable name="CustomAddRemark">
-        <attr name="imageR" format="reference"/>
-        <attr name="typeR" format="string"/>
-        <attr name="dataR" format="string"/>
+        <attr name="imageR" format="reference" />
+        <attr name="typeR" format="string" />
+        <attr name="dataR" format="string" />
     </declare-styleable>
 
     <declare-styleable name="CustomBudgetShow">
-        <attr name="imageS" format="reference"/>
-        <attr name="titleS" format="string"/>
-        <attr name="budgetS" format="string"/>
-        <attr name="balanceS" format="string"/>
-        <attr name="progressS" format="integer"/>
+        <attr name="imageS" format="reference" />
+        <attr name="titleS" format="string" />
+        <attr name="budgetS" format="string" />
+        <attr name="balanceS" format="string" />
+        <attr name="progressS" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomAccountBook">
+        <attr name="aname" format="string" />
+        <attr name="imageAB" format="reference" />
+        <attr name="create" format="string" />
+        <attr name="createNumber" format="string" />
     </declare-styleable>
 
 </resources>
